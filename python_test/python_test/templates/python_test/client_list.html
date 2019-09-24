@@ -1,0 +1,35 @@
+<html>
+<head>
+	
+		<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<h2>Client List</h2>
+<br>
+
+<!-- The form -->
+<form>
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<form>
+  <select name="order">
+    <option value="name">Client Name</option>
+    <option value="email_address">Email Address</option>
+    <option value="phone_number">Phone_number</option>
+    <option value="suburb">Suburbs</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+<ol>
+{% for object in object_list%}
+  <li><a href="{% url 'edit_client_view' pk=object.id %}">{{object.name}}</a></li>
+{% endfor %}
+</ol>  
+
+</body>
+</html>

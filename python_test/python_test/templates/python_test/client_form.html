@@ -1,0 +1,40 @@
+<html>
+<body>
+
+<h2>CLIENT {{form_type}} FORM </h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.errors}}
+  
+  Name :<br>
+  <input type="text" name="name" >
+  <br>
+  Street Name :<br>
+  <input type="text" name="street_name" >
+  <br>
+  Suburb :<br>
+  <input type="text" name="suburb" >
+  <br>
+  Postcode :<br>
+  <input type="text" name="postcode" >
+  <br>
+  State :<br>
+  <input type="text" name="state" >
+  <br>
+  Contact Name :<br>
+  <input type="text" name="contact_name" >
+  <br>
+  Email Address:<br>
+  <input type="text" name="email_address" >
+  <br>
+  Phone Number:<br>
+  <input type="text" name="phone_number" >
+  <br>
+
+  <input type="submit" value="Submit">
+
+</form> 
+
+</body>
+</html>
